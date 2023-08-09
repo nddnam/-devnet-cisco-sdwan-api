@@ -1,0 +1,72 @@
+==========================================================================
+INTRODUCTION
+==========================================================================
+
+- established by www.nam-nguyen.me
+- copyright www.itbase.tv
+- LinkedIn: https://www.linkedin.com/in/nam-ndd/
+
+==========================================================================
+WHAT IS IT?
+==========================================================================
+
+- This module provides Adminitration fuction to operate the Cisco SD-WAN Network (Viptela Network).
+- It's used the Cisco SDWAN API with vManage version 20.x
+
+==========================================================================
+MODULE STRUCTURES
+==========================================================================
+
+[[CLASS]]
+
+VMANAGE_AUTHENTICATION (vmanage_host, vmanage_port, vmanage_username, vmanage_password)
+ [method] get_header()
+  -> This method returns a Dictionary with 2 keys {header: xxxx, base_url: yyyy}
+  -> This return value will be inputed in below Class (Authentication Purpose)
+
+DEVICES (header)
+ [method] get_device_list()
+  -> To List all Devices.
+
+ [method] control_check(system_ip)
+  -> input: Device's system IP
+  -> output: all of control-connections on this device with status, uptime, color, etc.
+
+TEMPLATE (header)
+ [method] check_attached(template_name)
+  -> input: A Device Template Name
+  -> output: return if the given device template is being attached to any devices or not.
+
+ 'ON-GOING'[method] get_template_id(template_name)
+ 'ON-GOING'[method] get_device_template(template_name)
+
+[[FUNCTION]]
+
+TCP_CONNECTION_CHECK (vmanage_host, vmanage_port)
+ -> check TCP socket to vmanage return True/False
+
+CSV_EXPORT(list_of_dict, file_name)
+ -> output of every class/method above will be inputed of this fuction.
+ -> export to CSV file in current working directory with given filename or random filename if not provide.
+ -> return the CSV output file path.
+
+==========================================================================
+HOW TO USE?
+==========================================================================
+
+Please export the envirionment variables which include the credentials information:
+
+[Linux]
+export vmanage_host='your vmanage host'
+ export vmanage_port='443'
+ export vmanage_username='your username'
+ export vmanage_password='your password'
+
+[Windows]
+
+[System.Environment]::SetEnvironmentVariable('vmanage_host','your vmanage host')
+[System.Environment]::SetEnvironmentVariable('vmanage_port','443')
+[System.Environment]::SetEnvironmentVariable('vmanage_username','your username')
+[System.Environment]::SetEnvironmentVariable('vmanage_password','your password')
+
+==========================================================================
