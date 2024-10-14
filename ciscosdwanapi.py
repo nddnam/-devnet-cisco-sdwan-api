@@ -27,14 +27,17 @@ def CSV_EXPORT(list_of_dict, file_name='output_'+''.join((random.choice('random_
         csv_filename = file_name
     else:
         csv_filename = f"{file_name}.csv"
-
-    csv_header = [key for key in list_of_dict[0]]
-    with open(csv_filename, 'w') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames = csv_header)
-        writer.writeheader()
-        writer.writerows(list_of_dict)
-    csvfile.close()
-    return os.path.join(os.getcwd(), csv_filename)
+    #2024-10-14 check if list is blank
+    if (len(list_of_dict) != 0):
+        csv_header = [key for key in list_of_dict[0]]
+        with open(csv_filename, 'w') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames = csv_header)
+            writer.writeheader()
+            writer.writerows(list_of_dict)
+        csvfile.close()
+        return os.path.join(os.getcwd(), csv_filename)
+    else:
+        return "blank list"
 
 class VMANAGE_AUTHENTICATION:
 #Authentication with vManage and return the header
@@ -122,7 +125,18 @@ class DEVICES:
             output_data.append(data)
 
         return output_data
+    
+    #2024-10-14 get device BFD sessions
+    def get_bfd_sessions(self, system_ip):
+        api = "/dataservice/device/bfd/sessions"
+        url = f"{self.base_url}{api}?deviceId={system_ip}"
+        response = requests.get(url=url, headers=self.header, verify=False)
 
+        if response.status_code == 200:
+            items = response.json()['data']
+
+        return items
+    
 class TEMPLATE:
 #Cisco SD-WAN CLI Template Administration
     def __init__(self, header):
