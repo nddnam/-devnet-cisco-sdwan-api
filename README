@@ -57,10 +57,10 @@ HOW TO USE?
 Please export the envirionment variables which include the credentials information:
 
 [Linux]
-export vmanage_host='your vmanage host'
+export vmanage_host='10.1.1.200'
  export vmanage_port='443'
- export vmanage_username='your username'
- export vmanage_password='your password'
+ export vmanage_username='learner01'
+ export vmanage_password='learner01'
 
 [Windows]
 

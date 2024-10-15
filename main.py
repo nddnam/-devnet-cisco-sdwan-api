@@ -33,10 +33,10 @@ dev_list = device.get_device_list()
 #sapi.CSV_EXPORT(control_connections, "10.10.10.12-control-check.csv")
 
 ##CONTROL CONNECTION CHECK FOR ALL 2024-10-14
-#for dev in dev_list:
+for dev in dev_list:
 #    #print(f"{dev['system-ip']}")
-#    control_connections = device.control_check(dev['system-ip'])
-#    sapi.CSV_EXPORT(control_connections, f"{dev['system-ip']}-control-connections.csv")
+    control_connections = device.control_check(dev['system-ip'])
+    sapi.CSV_EXPORT(control_connections, f"{dev['system-ip']}-control-connections.csv")
 
 ##BFD SESSIONS CHECK FOR ALL 2024-10-14
 #system_ip = '10.0.1.1'
