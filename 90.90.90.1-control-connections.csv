@@ -1,0 +1,9 @@
+peer-type,system-ip,local-color,remote-color,uptime,site-id,protocol,state
+vedge,10.0.1.1,default,private1,0:02:54:56,1001,dtls,up
+vsmart,90.90.90.3,default,default,0:03:03:15,900,tls,up
+vbond,90.90.90.2,default,default,0:03:03:15,0,dtls,up
+vedge,10.0.4.2,default,private1,0:02:52:05,1004,dtls,up
+vedge,10.0.4.1,default,public-internet,0:02:51:53,1004,dtls,up
+vedge,10.0.2.1,default,private1,0:02:52:05,1002,dtls,up
+vedge,10.0.1.2,default,biz-internet,0:02:52:29,1001,dtls,up
+vedge,10.0.3.1,default,private1,0:02:54:34,1003,dtls,up

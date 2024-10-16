@@ -1,0 +1,11 @@
+src-ip,dst-ip,color,vdevice-name,src-port,system-ip,dst-port,site-id,transitions,vdevice-host-name,local-color,uptime,detect-multiplier,vdevice-dataKey,proto,lastupdated,state,tx-interval,uptime-date
+10.104.20.1,10.101.20.2,private1,10.0.4.1,12346,10.0.1.2,12346,1001,0,S1004-SD1,private2,0:02:51:54,7,10.0.4.1-private2-10.0.1.2-private1-ipsec,ipsec,1729051172559,up,1000,1729040820000
+10.104.20.1,172.16.11.1,private1,10.0.4.1,12346,10.0.1.1,12346,1001,0,S1004-SD1,private2,0:02:51:54,7,10.0.4.1-private2-10.0.1.1-private1-ipsec,ipsec,1729051172559,up,1000,1729040820000
+10.104.20.1,172.16.12.1,private1,10.0.4.1,12346,10.0.2.1,12346,1002,1,S1004-SD1,private2,0:00:26:04,7,10.0.4.1-private2-10.0.2.1-private1-ipsec,ipsec,1729051172559,up,1000,1729049580000
+10.104.20.1,172.16.13.1,private1,10.0.4.1,12346,10.0.3.1,12346,1003,0,S1004-SD1,private2,0:02:51:55,7,10.0.4.1-private2-10.0.3.1-private1-ipsec,ipsec,1729051172559,up,1000,1729040820000
+14.10.4.1,11.10.1.1,public-internet,10.0.4.1,12346,10.0.1.2,5065,1001,0,S1004-SD1,public-internet,0:02:51:54,7,10.0.4.1-public-internet-10.0.1.2-public-internet-ipsec,ipsec,1729051172559,up,1000,1729040820000
+14.10.4.1,11.10.1.1,public-internet,10.0.4.1,12346,10.0.1.1,12346,1001,0,S1004-SD1,public-internet,0:02:51:54,7,10.0.4.1-public-internet-10.0.1.1-public-internet-ipsec,ipsec,1729051172559,up,1000,1729040820000
+14.10.4.1,11.10.2.1,biz-internet,10.0.4.1,12346,10.0.1.1,5066,1001,0,S1004-SD1,public-internet,0:02:51:54,7,10.0.4.1-public-internet-10.0.1.1-biz-internet-ipsec,ipsec,1729051172559,up,1000,1729040820000
+14.10.4.1,11.10.2.1,biz-internet,10.0.4.1,12346,10.0.1.2,12346,1001,0,S1004-SD1,public-internet,0:02:51:54,7,10.0.4.1-public-internet-10.0.1.2-biz-internet-ipsec,ipsec,1729051172559,up,1000,1729040820000
+14.10.4.1,12.10.2.1,public-internet,10.0.4.1,12346,10.0.2.1,12346,1002,1,S1004-SD1,public-internet,0:00:26:05,7,10.0.4.1-public-internet-10.0.2.1-public-internet-ipsec,ipsec,1729051172559,up,1000,1729049580000
+14.10.4.1,13.10.3.1,public-internet,10.0.4.1,12346,10.0.3.1,12346,1003,0,S1004-SD1,public-internet,0:02:51:55,7,10.0.4.1-public-internet-10.0.3.1-public-internet-ipsec,ipsec,1729051172559,up,1000,1729040820000
